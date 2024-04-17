@@ -18,21 +18,33 @@
       color: $color-black;
     }
 
+    &__icon {
+      font-size: 20px;
+      transition-duration: 300ms;
+    }
+
     &__childs {
       display: none;
       position: absolute;
       top: 100%;
-      left: 0;
-      background-color: $color-gray-4;
-      width: 100%;
-      height: 2000px;
-      padding: 0 180px;
-      opacity: 0.4;
+      left: 180px;
+      background-color: $color-gray-2;
+      width: calc(100% - 2 * 180px);
+      height: 400px;
+      border-radius: 0 0 10px 10px;
     }
 
     &:hover {
       border-color: $color-blue-3;
       color: $color-blue-3;
+
+      .categiry-item__name {
+        color: $color-blue-3;
+      }
+
+      .categiry-item__icon {
+        transform: rotate(180deg);
+      }
 
       .categiry-item__childs {
         display: block;

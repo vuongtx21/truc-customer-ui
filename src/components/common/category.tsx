@@ -1,6 +1,7 @@
 import useMockData from "@/hooks/useMockData";
 import { Flex } from "antd";
-import React from "react";
+import React, { Fragment } from "react";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 interface CategoryProps {}
 
@@ -14,12 +15,19 @@ const Category: React.FunctionComponent<CategoryProps> = () => {
           align="center"
           className="categiry-item"
           key={`category-${category.id}`}
+          gap={5}
         >
           <span className="categiry-item__name">{category.name}</span>
+
           {!!category.children.length && (
-            <div className="categiry-item__childs">
-              {category.children.length}
-            </div>
+            <Fragment>
+              <MdKeyboardArrowDown className="categiry-item__icon" />
+              <div className="categiry-item__childs">
+                {category.children.map((categoryLevelTwo) => (
+                  <span>{categoryLevelTwo.name}</span>
+                ))}
+              </div>
+            </Fragment>
           )}
         </Flex>
       ))}

@@ -1,0 +1,59 @@
+.dashboard {
+  width: 100%;
+  padding: 50px 180px;
+  background-color: $color-orange-1;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+
+.product-card {
+  width: 100%;
+  padding: 10px;
+  background-color: $color-white;
+  border: 1px solid $color-white;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  border-radius: 12px;
+
+  &:hover {
+    border-color: $color-blue-3;
+  }
+
+  &__name {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  &__img {
+    width: 128px;
+    height: 128px;
+  }
+
+  &__price {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: $color-blue-3;
+  }
+
+  &__unit {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    color: $color-blue-3;
+  }
+
+  &__specification {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background-color: $color-gray-3;
+  }
+}

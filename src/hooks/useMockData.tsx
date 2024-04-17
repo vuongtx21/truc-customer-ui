@@ -1,4 +1,5 @@
 import { CategoryProps } from "@/models/category";
+import { ProductProps } from "@/models/product";
 import { useMemo } from "react";
 
 const useMockData = () => {
@@ -83,7 +84,49 @@ const useMockData = () => {
     []
   );
 
-  return { categories };
+  const products = useMemo(
+    (): ProductProps[] => [
+      {
+        id: "00039538",
+        name: "Viên sủi Kudos Bone hương cam bổ sung canxi, vitamin K2, vitamin D3 cho cơ thể (20 viên)",
+        imgUrl:
+          "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09344_b38a024079.jpg",
+        price: 113000.0,
+        specification: "Tuýp 20 Viên",
+        measureUnitName: "Tuýp",
+      },
+      {
+        id: "00039925",
+        name: "Viên sủi Kudos Vitamin C 1000mg hương chanh giúp bổ sung vitamin C cho cơ thể (20 viên)",
+        imgUrl:
+          "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09324_db795e136a.jpg",
+        price: 113000.0,
+        specification: "Tuýp 20 Viên",
+        measureUnitName: "Tuýp",
+      },
+      {
+        id: "00041031",
+        name: "Kem thoa da Tiacortisol dưỡng ẩm, làm mềm dịu vùng da bị khô, nhờn (8g)",
+        imgUrl:
+          "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/DSC_00435_7908a5a347.jpg",
+        price: 12000.0,
+        specification: "Hộp x 8g",
+        measureUnitName: "Hộp",
+      },
+      {
+        id: "00503082",
+        name: "Sáp dưỡng ẩm Vaseline Original Fobelife làm mềm da, làm dịu da khi bị khô rát, nứt nẻ (7g)",
+        imgUrl:
+          "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00503082_sap_duong_am_vaseline_original_fobelife_7g_5786_6406_large_f85fc68701.jpg",
+        price: 35000.0,
+        specification: "Hũ x 7g",
+        measureUnitName: "Hũ",
+      },
+    ],
+    []
+  );
+
+  return { categories, products };
 };
 
 export default useMockData;
