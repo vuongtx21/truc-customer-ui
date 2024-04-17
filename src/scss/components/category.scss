@@ -1,0 +1,42 @@
+.categories {
+  width: 100%;
+  height: 44px;
+  background-color: $color-white;
+  padding: 0 180px;
+  position: relative;
+
+  .categiry-item {
+    height: 100%;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition-duration: 300ms;
+
+    &__name {
+      font-size: 16px;
+      font-weight: 500;
+      transition-duration: 300ms;
+      color: $color-black;
+    }
+
+    &__childs {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: $color-gray-4;
+      width: 100%;
+      height: 2000px;
+      padding: 0 180px;
+      opacity: 0.4;
+    }
+
+    &:hover {
+      border-color: $color-blue-3;
+      color: $color-blue-3;
+
+      .categiry-item__childs {
+        display: block;
+      }
+    }
+  }
+}

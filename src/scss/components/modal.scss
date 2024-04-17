@@ -1,0 +1,37 @@
+.login-form {
+  width: 100%;
+
+  .text {
+    width: 80%;
+    text-align: center;
+    font-size: 16px;
+    color: $color-gray-1;
+  }
+
+  input {
+    width: 100%;
+    outline: none;
+    padding: 11px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid $color-gray-2;
+    transition-duration: 300ms;
+
+    &:focus,
+    &:hover {
+      border-color: $color-blue-3;
+    }
+  }
+
+  .error-message {
+    font-size: 14px;
+    color: $color-red-1;
+  }
+
+  .btn-submit {
+    width: 85%;
+    font-size: 16px;
+    font-weight: 500;
+    height: 44px;
+  }
+}

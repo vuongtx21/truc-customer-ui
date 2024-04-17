@@ -1,0 +1,69 @@
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: $color-blue-1;
+  padding: 0 180px;
+
+  &__logo {
+    span {
+      font-size: 32px;
+      font-weight: 700;
+      color: $color-white;
+      text-transform: uppercase;
+    }
+  }
+
+  &__search {
+    flex: 1 1 0;
+    padding: 8px 10px 8px 18px;
+    background-color: $color-white;
+    border-radius: 999px;
+
+    input {
+      width: 100%;
+      padding: 6px 0;
+      background: transparent;
+      border: 0;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .search-icon {
+      width: 32px;
+      height: 32px;
+      background-color: $color-blue-2;
+      color: $color-blue-3;
+      border-radius: 50%;
+      transition-duration: 300ms;
+
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    &:focus-within {
+      .search-icon {
+        background-color: $color-blue-3;
+        color: $color-white;
+      }
+    }
+  }
+
+  .login-btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: $color-white;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    span {
+      font-size: 16px;
+    }
+  }
+}
